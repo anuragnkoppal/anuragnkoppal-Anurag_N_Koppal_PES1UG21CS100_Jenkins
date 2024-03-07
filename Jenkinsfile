@@ -8,9 +8,9 @@ pipeline {
                 
             }
         }
-        stagwe('Test') {
+        stage('Test') {
             steps {
-                sh './output'
+                shh './output'
                 
             }
 
