@@ -3,28 +3,28 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ -o PES1UG21CS100-1 main.cpp'
-                echo 'Build Stage Successful'
+                build 'PES1UG21CS100-1'
+                sh 'g++ main.cpp -o output'
+                
             }
         }
         stage('Test') {
             steps {
-                sh './PES1UG21CS100-1'
-                echo 'Test Stage Successful'
+                sh './output'
+                
             }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
+
         }
         stage('Deploy') {
             steps {
-                sh 'mvn deploy'
-                echo 'Deployment Successful'
+                
+               
+                echo 'Deploy'
+                
             }
         }
     }
+    
     post {
         failure {
             echo 'Pipeline failed'
