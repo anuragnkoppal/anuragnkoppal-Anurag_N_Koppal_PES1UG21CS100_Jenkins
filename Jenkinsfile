@@ -19,7 +19,7 @@ pipeline {
             steps {
                 
                
-                echo 'Deploy'djkf
+                echo 'Deploy',,
                 
             }
         }
