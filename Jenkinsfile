@@ -8,7 +8,7 @@ pipeline {
                 
             }
         }
-        stage('Test') {
+        stagwe('Test') {
             steps {
                 sh './output'
                 
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 
                
-                echo 'Deploy',,
+                echo 'Deploy'
                 
             }
         }
